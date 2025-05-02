@@ -5,8 +5,6 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve favicon.ico from the 'public' folder
-app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
 
 // Serve static assets
 app.use('/public', express.static(path.join(__dirname, 'public')));
