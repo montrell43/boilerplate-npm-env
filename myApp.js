@@ -5,10 +5,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.path} - ${req.ip}`);
-  next();  // Continue to the next middleware or route handler
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.path} - ${req.ip}`);
+//   next();  
+//   });
+  // Continue to the next middleware or route handler
+
 
 app.use('/favicon.ico', express.static(path.join(__dirname, 'public', 'favicon.ico')));
 
