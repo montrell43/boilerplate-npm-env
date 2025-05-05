@@ -21,8 +21,8 @@ if (!process.env.DISABLE_XORIGIN) {
 
 const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log("Server is running on port " + port);
+http.createServer(app).listen(port, () => {
+  console.log("Node.js listening on port " + port);
 });
 
 
