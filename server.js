@@ -2,7 +2,7 @@
 
 const bGround = require('fcc-express-bground');
 const myApp = require('./myApp');
-// const express = require('express');
+const express = require('express');
 const app = myApp;
 const http = require('http');
 
@@ -23,8 +23,8 @@ if (!process.env.DISABLE_XORIGIN) {
 
 const port = process.env.PORT || 3000;
 
-http.createServer(app).listen(port, () => {
-  console.log("Node.js listening on port " + port);
+bGround.setupBackgroundApp(app, myApp, __dirname).listen(port, function(){
+  bGround.log('Node is listening on port '+ port + '...')
 });
 
 
