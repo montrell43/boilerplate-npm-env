@@ -49,16 +49,16 @@ app.get("/json", (req, res) => {
 // Use the .env File
 // Created .env file in the root directory
 // Declared and Initialized MESSAGE_STYLE variable init
-// app.get("/json", (req, res) => {
-//     let message;
-//     if (process.env['MESSAGE_STYLE'] === "uppercase") {
-//         message = "Hello json".toUpperCase();
-//     }
-//     else {
-//         message = "Hello json";
-//     }
-//     res.json({ "message": `${message}` });
-// });
+app.get("/json", (req, res) => {
+    let message;
+    if (process.env['MESSAGE_STYLE'] === "uppercase") {
+        message = "Hello json".toUpperCase();
+    }
+    else {
+        message = "Hello json";
+    }
+    res.json({ "message": `${message}` });
+});
 
 // ----------------CHALLENGE 7----------------
 // Implement a Root-Level Request Logger Middleware
