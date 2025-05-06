@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
 
 
 // Serve JSON at /json route
-app.get('/json', function(req, res) {
+app.get('json', function(req, res) {
   res.json({ message: "Hello json" });
 });
 
